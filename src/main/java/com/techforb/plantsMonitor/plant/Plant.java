@@ -33,6 +33,7 @@ public class Plant {
             Sensor sensor = Sensor.builder()
                     .sensorType(type)
                     .plant(this)
+                    .isEnabled(true)
                     .build();
             sensor.generateRandomValues();
             sensors.add(sensor);

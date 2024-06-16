@@ -16,5 +16,5 @@ public class PlantResponse {
     private Long totalReadings;
     private Integer totalMediumAlerts;
     private Integer totalRedAlerts;
-    private Byte sensorsDisabled;
+    private Integer sensorsDisabled;
 }

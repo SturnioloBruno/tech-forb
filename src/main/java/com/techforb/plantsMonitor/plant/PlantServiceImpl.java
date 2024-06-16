@@ -104,7 +104,7 @@ public class PlantServiceImpl implements PlantService {
         Long totalReadings = 0L;
         Integer totalMediumAlerts = 0;
         Integer totalRedAlerts = 0;
-        Byte sensorsDisabled = 0;
+        Integer sensorsDisabled = 0;
 
         for (Sensor sensor : plant.getSensors()) {
             totalReadings += sensor.getReadings();
@@ -116,6 +116,7 @@ public class PlantServiceImpl implements PlantService {
         }
 
         return PlantResponse.builder()
+                .id(plant.getId())
                 .name(plant.getName())
                 .country(plant.getCountry())
                 .totalReadings(totalReadings)
