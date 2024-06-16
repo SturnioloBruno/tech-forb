@@ -2,6 +2,8 @@ package com.techforb.plantsMonitor.plant;
 
 import com.techforb.plantsMonitor.plant.dto.PlantRequest;
 import com.techforb.plantsMonitor.plant.dto.PlantResponse;
+import com.techforb.plantsMonitor.plant.dto.PlantUpdate;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/plants")
+@SecurityRequirement(name = "bearerAuth")
 public class PlantController {
 
     private final PlantService plantService;
@@ -34,5 +37,11 @@ public class PlantController {
     public ResponseEntity<Void> deletePlant(@PathVariable Long id) {
         plantService.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PlantResponse> updatePlant(@PathVariable Long id, @RequestBody PlantUpdate plantUpdate) {
+        PlantResponse updatedPlant = plantService.update(plantUpdate, id);
+        return ResponseEntity.ok(updatedPlant);
     }
 }

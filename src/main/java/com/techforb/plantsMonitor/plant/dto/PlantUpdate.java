@@ -9,12 +9,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PlantResponse {
-    private Long id;
+public class PlantUpdate {
     private String name;
     private String country;
     private Long totalReadings;
-    private Integer totalMediumAlerts;
-    private Integer totalRedAlerts;
-    private Byte sensorsDisabled;
+    private Integer sensorsDisabled;
+    private Integer mediumAlerts;
+    private Integer redAlerts;
 }
