@@ -52,7 +52,8 @@ public class BeansConfig {
         config.setAllowCredentials(true);
         config.setAllowedOrigins(Arrays.asList(
                 "http://localhost:4200",
-                "https://tech-forb-frontend-brunixs-projects.vercel.app"
+                "https://tech-forb-frontend-brunixs-projects.vercel.app",
+                "https://tech-forb-production.up.railway.app"
         ));
         config.setAllowedHeaders(Arrays.asList(
                 ORIGIN,
