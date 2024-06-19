@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    name: spring-blog
+
+  sql:
+    init:
+      mode: always # esto despues lo tengo que sacar
+
