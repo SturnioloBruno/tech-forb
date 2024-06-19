@@ -19,31 +19,31 @@ import static org.springframework.http.HttpStatus.*;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(LockedException.class)
-    public ResponseEntity<ExceptionResponse> handleException(LockedException exp) {
-        return ResponseEntity
-                .status(UNAUTHORIZED)
-                .body(
-                        ExceptionResponse.builder()
-                                .businessErrorCode(ACCOUNT_LOCKED.getCode())
-                                .businessErrorDescription(ACCOUNT_LOCKED.getDescription())
-                                .error(exp.getMessage())
-                                .build()
-                );
-    }
+//    @ExceptionHandler(LockedException.class)
+//    public ResponseEntity<ExceptionResponse> handleException(LockedException exp) {
+//        return ResponseEntity
+//                .status(UNAUTHORIZED)
+//                .body(
+//                        ExceptionResponse.builder()
+//                                .businessErrorCode(ACCOUNT_LOCKED.getCode())
+//                                .businessErrorDescription(ACCOUNT_LOCKED.getDescription())
+//                                .error(exp.getMessage())
+//                                .build()
+//                );
+//    }
 
-    @ExceptionHandler(DisabledException.class)
-    public ResponseEntity<ExceptionResponse> handleException(DisabledException exp) {
-        return ResponseEntity
-                .status(UNAUTHORIZED)
-                .body(
-                        ExceptionResponse.builder()
-                                .businessErrorCode(ACCOUNT_DISABLED.getCode())
-                                .businessErrorDescription(ACCOUNT_DISABLED.getDescription())
-                                .error(exp.getMessage())
-                                .build()
-                );
-    }
+//    @ExceptionHandler(DisabledException.class)
+//    public ResponseEntity<ExceptionResponse> handleException(DisabledException exp) {
+//        return ResponseEntity
+//                .status(UNAUTHORIZED)
+//                .body(
+//                        ExceptionResponse.builder()
+//                                .businessErrorCode(ACCOUNT_DISABLED.getCode())
+//                                .businessErrorDescription(ACCOUNT_DISABLED.getDescription())
+//                                .error(exp.getMessage())
+//                                .build()
+//                );
+//    }
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<ExceptionResponse> handleException(BadCredentialsException exp) {

@@ -14,12 +14,6 @@ services:
     networks:
       - spring-demo
     restart: unless-stopped
-  mail-dev:
-    container_name: mail-dev-tf
-    image: maildev/maildev
-    ports:
-      - 1080:1080
-      - 1025:1025
 
 
 networks:
