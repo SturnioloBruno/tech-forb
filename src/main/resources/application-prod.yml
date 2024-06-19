@@ -9,3 +9,8 @@ spring:
     init:
       mode: always # esto despues lo tengo que sacar
 
+application:
+  security:
+    jwt:
+      secret-key: ${SECRET_KEY}
+      expiration: 86400000
