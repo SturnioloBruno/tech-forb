@@ -3,7 +3,16 @@ spring:
     url: jdbc:postgresql://viaduct.proxy.rlwy.net:11791/railway
     username: postgres
     password: ideYpANgZhBpxuXShXtOwJjXODMiHkyE
-    name: tech-forb
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   sql:
     init:
