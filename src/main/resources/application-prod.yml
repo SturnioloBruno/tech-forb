@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${POSTGRES_DB}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
-    name: spring-blog
+    url: jdbc:postgresql://viaduct.proxy.rlwy.net:11791/railway
+    username: postgres
+    password: ideYpANgZhBpxuXShXtOwJjXODMiHkyE
+    name: tech-forb
 
   sql:
     init:
