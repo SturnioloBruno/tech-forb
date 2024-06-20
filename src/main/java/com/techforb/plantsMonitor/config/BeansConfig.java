@@ -59,7 +59,8 @@ public class BeansConfig {
                 "https://tech-forb-frontend-brunixs-projects.vercel.app",
                 "https://tech-forb-production.up.railway.app",
                 "http://tech-forb-production.up.railway.app",
-                "http://tech-forb-frontend-brunixs-projects.vercel.app"
+                "http://tech-forb-frontend-brunixs-projects.vercel.app",
+                "https://tech-forb-frontend.vercel.app"
         ));
         config.setAllowedHeaders(Arrays.asList(
                 ORIGIN,
