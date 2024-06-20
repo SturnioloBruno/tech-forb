@@ -25,8 +25,8 @@ application:
       expiration: 86400000
 
 
-server:
-  port: ${PORT}
+https:
+  port: ${HTTPS}
 
 http:
   port: ${HTTP}
