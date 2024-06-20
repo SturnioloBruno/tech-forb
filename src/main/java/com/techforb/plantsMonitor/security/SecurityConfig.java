@@ -28,9 +28,9 @@ public class SecurityConfig {
         http
                 .cors(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
-//                .requiresChannel(chanel ->
-//                    chanel.anyRequest().requiresSecure()
-//                )
+                .requiresChannel(chanel ->
+                    chanel.anyRequest().requiresSecure()
+                )
                 .authorizeHttpRequests(req ->
                         req.requestMatchers(
                                 "/auth/**",
