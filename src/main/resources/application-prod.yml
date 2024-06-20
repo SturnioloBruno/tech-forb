@@ -26,6 +26,8 @@ application:
 
 
 server:
-  http:
-    port: ${PORT}
+  port: ${PORT}
+
+http:
+  port: ${HTTP}
 

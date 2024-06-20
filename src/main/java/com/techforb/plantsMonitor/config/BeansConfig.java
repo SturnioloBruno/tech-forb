@@ -79,7 +79,7 @@ public class BeansConfig {
     }
 
     @Bean
-    public ServletWebServerFactory servletContainer(@Value("${server.http.port}") int httpPort) {
+    public ServletWebServerFactory servletContainer(@Value("${http.port}") int httpPort) {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setPort(httpPort);
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
