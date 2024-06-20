@@ -81,15 +81,11 @@ public class BeansConfig {
     @Bean
     public ServletWebServerFactory servletContainer(@Value("${https.port}") int httpsPort) {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-        tomcat.addAdditionalTomcatConnectors(createHttpsConnector(httpsPort));
+        tomcat.addConnectorCustomizers(connector -> {
+            connector.setPort(httpsPort);
+            connector.setSecure(true);
+            connector.setScheme("https");
+        });
         return tomcat;
-    }
-
-    private Connector createHttpsConnector(int port) {
-        Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
-        connector.setPort(port);
-        connector.setSecure(true);
-        connector.setScheme("https");
-        return connector;
     }
 }
