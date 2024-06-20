@@ -27,8 +27,6 @@ application:
 server:
   ssl:
     key-store-type: PKCS12
-    key-store: classpath:certificado.p12
-    key-password:
-    key-alias: certificadoAlias
-    enabled: true
-    client-auth: none
+    key-store: classpath:javadevjournal.p12
+    key-store-password: brunix
+    key-alias: javadevjournal
