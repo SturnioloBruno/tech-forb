@@ -27,3 +27,6 @@ server:
     key-store: classpath:javadevjournal.p12
     key-store-password: brunix
     key-alias: javadevjournal
+
+https:
+  port: 8443
