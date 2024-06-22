@@ -1,4 +1,4 @@
-package com.techforb.plantsMonitor.probando;
+package com.techforb.plantsMonitor.proxyFlags;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +52,7 @@ public class ProxyController {
         if (codigo != null) {
             return getBanderaAPartirDelCodigo(codigo);
         }else
-            return null;
+            return ResponseEntity.notFound().build();
     }
 
     private String obtenerCodigoPaisAPartirDelNombre(String nombrePais) {
